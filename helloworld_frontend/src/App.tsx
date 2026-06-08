@@ -7,6 +7,12 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  const URL = 'https://helloworld-backend-sega.onrender.com';
+
+  fetch(`${URL}/helloworld/fetch`)
+      .then(res => res.text())
+      .then(console.warn);
+
   return (
     <>
       <section id="center">
