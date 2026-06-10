@@ -1,5 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom";
 import logo from "./../../../assets/OlderWatchTracer.png";
+import {
+  BRACKET_PAGE,
+  RULES_PAGE,
+  TEAMS_PAGE,
+} from "../../rules/utils/pageContent.tsx";
 
 const linkStyle = ({ isActive }: { isActive: boolean }) => ({
   color: isActive ? "#FC9D1F" : "#3a3f45",
@@ -28,14 +33,14 @@ export const SplashPage = ({}) => {
       >
         <img style={{ height: "50px", width: "auto" }} src={logo} alt={""} />
         <nav style={{ display: "flex", gap: "1rem", textDecoration: "none" }}>
-          <NavLink to={"rules"} style={linkStyle}>
-            Rules
+          <NavLink to={RULES_PAGE.path} style={linkStyle}>
+            {RULES_PAGE.title}
           </NavLink>
-          <NavLink to={"bracket"} style={linkStyle}>
-            Bracket
+          <NavLink to={BRACKET_PAGE.path} style={linkStyle}>
+            {BRACKET_PAGE.title}
           </NavLink>
-          <NavLink to={"teams"} style={linkStyle}>
-            Teams
+          <NavLink to={TEAMS_PAGE.path} style={linkStyle}>
+            {TEAMS_PAGE.title}
           </NavLink>
         </nav>
         <div

@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { RULES_PAGES } from "../utils/pageMetadata.ts";
+import { SIGNUP_PAGE, TOURNAMENT_PAGE } from "../utils/pageContent.tsx";
 
 const linkStyle = ({ isActive }: { isActive: boolean }) => ({
   color: isActive ? "#FC9D1F" : "#3a3f45",
@@ -26,11 +26,11 @@ export const RulesPage = ({}) => {
           borderRadius: "8px",
         }}
       >
-        <NavLink to={RULES_PAGES.TOURNAMENT.path} style={linkStyle}>
-          Tournament
+        <NavLink to={TOURNAMENT_PAGE.path} style={linkStyle}>
+          {TOURNAMENT_PAGE.title}
         </NavLink>
-        <NavLink to={RULES_PAGES.SIGNUP.path} style={linkStyle}>
-          Signups
+        <NavLink to={SIGNUP_PAGE.path} style={linkStyle}>
+          {SIGNUP_PAGE.title}
         </NavLink>
       </aside>
       {/* This is where children render */}

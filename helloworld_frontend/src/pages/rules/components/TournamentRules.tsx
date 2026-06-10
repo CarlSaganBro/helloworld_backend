@@ -1,8 +1,10 @@
 import { BaseRulesPage } from "./BaseRulesPage.tsx";
-import { TournamentRulesContent } from "../assets/pageContent.ts";
+import {
+  TOURNAMENT_PAGE,
+  TournamentRulesContent,
+} from "../utils/pageContent.tsx";
 import { ExpandableItem } from "./ExpandableItem.tsx";
 import { SearchBar } from "./SearchBar.tsx";
-import { RULES_PAGES } from "../utils/pageMetadata.ts";
 import { useState } from "react";
 
 export const TournamentRules = ({}) => {
@@ -12,7 +14,7 @@ export const TournamentRules = ({}) => {
     <BaseRulesPage>
       <>
         <SearchBar
-          page={RULES_PAGES.TOURNAMENT}
+          page={TOURNAMENT_PAGE}
           handleQuery={(result) => setQuery(result)}
         />
         <div>

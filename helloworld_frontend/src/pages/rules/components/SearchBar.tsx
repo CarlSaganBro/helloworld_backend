@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { PageDefinition } from "../types/types.ts";
+import type { PageDefinition } from "../types/types.tsx";
 import { useDebouncedCallback } from "../../../utils/useDebouncedCallback.ts";
 
 export const SearchBar = ({

@@ -1,4 +1,4 @@
-import type { RuleContent } from "../types/types.ts";
+import type { RuleContent } from "../types/types.tsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
@@ -24,14 +24,16 @@ export function ExpandableItem({
     <div onClick={() => setOpen(!open)}>
       <li>
         <HighlightText text={rule.content} query={query} />
-        <span>
-          {open ? (
-            <FontAwesomeIcon icon={faMinus} />
-          ) : (
-            <FontAwesomeIcon icon={faPlus} />
-          )}
-        </span>
-        {open && (
+        {rule.reason && (
+          <span>
+            {open ? (
+              <FontAwesomeIcon icon={faMinus} />
+            ) : (
+              <FontAwesomeIcon icon={faPlus} />
+            )}
+          </span>
+        )}
+        {open && rule.reason && (
           <span>
             <i>Reason: {rule.reason}</i>
           </span>

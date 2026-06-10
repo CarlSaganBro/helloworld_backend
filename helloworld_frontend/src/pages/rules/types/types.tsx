@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface RuleContent {
   content: string;
   reason?: string;
@@ -6,4 +8,6 @@ export interface RuleContent {
 export interface PageDefinition {
   path: string;
   title: string;
+  element: React.JSX.Element;
+  subPages?: PageDefinition[];
 }

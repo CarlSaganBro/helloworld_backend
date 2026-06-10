@@ -1,7 +1,4 @@
-import {
-  SignupsRulesContent,
-  TournamentRulesContent,
-} from "../assets/pageContent.ts";
+import { SignupsRulesContent, TournamentRulesContent } from "./pageContent.tsx";
 
 export interface SearchIndexItem {
   path: string;
@@ -15,7 +12,7 @@ export const searchIndex: SearchIndexItem[] = [
   },
   {
     path: "/rules",
-    content: "Learn more about our company and what we do.",
+    content: "",
   },
   {
     path: "/rules/tournament",

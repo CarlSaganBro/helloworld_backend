@@ -1,8 +1,7 @@
 import { BaseRulesPage } from "./BaseRulesPage.tsx";
-import { SignupsRulesContent } from "../assets/pageContent.ts";
+import { SIGNUP_PAGE, SignupsRulesContent } from "../utils/pageContent.tsx";
 import { ExpandableItem } from "./ExpandableItem.tsx";
 import { SearchBar } from "./SearchBar.tsx";
-import { RULES_PAGES } from "../utils/pageMetadata.ts";
 import { useState } from "react";
 
 export const SignupRules = ({}) => {
@@ -12,7 +11,7 @@ export const SignupRules = ({}) => {
     <BaseRulesPage>
       <>
         <SearchBar
-          page={RULES_PAGES.SIGNUP}
+          page={SIGNUP_PAGE}
           handleQuery={(result) => setQuery(result)}
         />
         <div>
