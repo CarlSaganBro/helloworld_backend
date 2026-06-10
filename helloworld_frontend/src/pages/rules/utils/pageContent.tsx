@@ -41,7 +41,7 @@ export const PAGES: PageDefinition[] = [RULES_PAGE, BRACKET_PAGE, TEAMS_PAGE];
 export const TournamentRulesContent: RuleContent[] = [
   {
     content:
-      "Players must stay in assigned roles when teams are finalized. This includes switching to a non-assigned role to use an ability from a hero that is in the non-assigned role. Example of this is a player assigned to a Support role switching to Symmetra to use the teleport ability at the beginning of the game.",
+      "Players must stay in assigned roles when teams are <b>finalized</b>. This includes switching to a non-assigned role to use an ability from a hero that is in the non-assigned role. Example of this is a player assigned to a Support role switching to Symmetra to use the teleport ability at the beginning of the game.",
     reason:
       "To keep someone signed up as a Platinum Support from switching to DPS mid-game where they are Masters.",
   },

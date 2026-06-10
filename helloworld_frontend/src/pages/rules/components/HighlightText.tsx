@@ -1,3 +1,5 @@
+import parse from "html-react-parser";
+
 export default function HighlightText({
   text,
   query,
@@ -5,7 +7,7 @@ export default function HighlightText({
   text: string;
   query: string;
 }) {
-  if (!query) return <span>{text}</span>;
+  if (!query) return <span>{parse(text)}</span>;
 
   const regex = new RegExp(`(${query})`, "gi");
   const parts = text.split(regex);
