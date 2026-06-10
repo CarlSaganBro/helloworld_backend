@@ -20,7 +20,14 @@ export const SearchBar = ({
   return (
     <div>
       <input
-        placeholder={`Search ${page.title}...`}
+        style={{
+          borderRadius: "8px",
+          border: "1px solid #FC9D1F",
+          background: "#F2F2F2",
+          width: "80%",
+          padding: "8px",
+        }}
+        placeholder={`Search ${page.title} rules...`}
         value={query}
         onChange={(e) => handleChange(e.target.value)}
       />

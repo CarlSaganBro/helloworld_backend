@@ -1,10 +1,10 @@
-import { NavLink, Outlet } from "react-router-dom";
-import logo from "./../../../assets/OlderWatchTracer.png";
+import { Link, NavLink, Outlet } from "react-router-dom";
+import logo from "../assets/OlderWatchTracer.png";
 import {
   BRACKET_PAGE,
   RULES_PAGE,
   TEAMS_PAGE,
-} from "../../rules/utils/pageContent.tsx";
+} from "../pages/rules/utils/pageContent.tsx";
 
 const linkStyle = ({ isActive }: { isActive: boolean }) => ({
   color: isActive ? "#FC9D1F" : "#3a3f45",
@@ -16,7 +16,7 @@ const linkStyle = ({ isActive }: { isActive: boolean }) => ({
   width: "80px",
 });
 
-export const SplashPage = ({}) => {
+export const Layout = ({}) => {
   return (
     <div>
       <header
@@ -31,7 +31,9 @@ export const SplashPage = ({}) => {
           margin: "16px",
         }}
       >
-        <img style={{ height: "50px", width: "auto" }} src={logo} alt={""} />
+        <Link to={"/"}>
+          <img style={{ height: "50px", width: "auto" }} src={logo} alt={""} />
+        </Link>
         <nav style={{ display: "flex", gap: "1rem", textDecoration: "none" }}>
           <NavLink to={RULES_PAGE.path} style={linkStyle}>
             {RULES_PAGE.title}
@@ -55,6 +57,7 @@ export const SplashPage = ({}) => {
           </select>
         </div>
       </header>
+      {/* Router pages */}
       <Outlet />
     </div>
   );

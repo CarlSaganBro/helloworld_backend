@@ -1,7 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { SplashPage } from "../pages/splash/components/SplashPage.tsx";
+import { HomePage } from "../pages/home/components/HomePage.tsx";
 import { PAGES } from "../pages/rules/utils/pageContent.tsx";
 import type { PageDefinition } from "../pages/rules/types/types.tsx";
+import { Layout } from "./Layout.tsx";
 
 export const MyApp = ({}) => {
   const renderRoutes = (pages: PageDefinition[]) => {
@@ -24,7 +25,8 @@ export const MyApp = ({}) => {
     <div>
       <Routes>
         <Route path="*" element={<Navigate to="/" replace />} />
-        <Route path="/" element={<SplashPage />}>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
           {renderRoutes(PAGES)}
         </Route>
       </Routes>

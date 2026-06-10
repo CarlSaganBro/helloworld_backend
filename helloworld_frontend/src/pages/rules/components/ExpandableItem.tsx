@@ -24,6 +24,7 @@ export function ExpandableItem({
     <div onClick={() => setOpen(!open)}>
       <li>
         <HighlightText text={rule.content} query={query} />
+        <br />
         {rule.reason && (
           <span>
             {open ? (
