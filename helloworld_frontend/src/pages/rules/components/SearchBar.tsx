@@ -1,9 +1,6 @@
 import { useState } from "react";
-// import Fuse from "fuse.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-// import { searchIndex, type SearchIndexItem } from "../utils/searchIndex.ts";
 import type { PageDefinition } from "../types/types.ts";
+import { useDebouncedCallback } from "../../../utils/useDebouncedCallback.ts";
 
 export const SearchBar = ({
   page,
@@ -13,23 +10,20 @@ export const SearchBar = ({
   handleQuery: (result: string) => void;
 }) => {
   const [query, setQuery] = useState("");
+  const debouncedCallback = useDebouncedCallback(handleQuery, 200);
 
-  // const fuse = new Fuse(searchIndex, {
-  //   keys: ["content"],
-  //   threshold: 0.3,
-  //   includeMatches: true,
-  // });
-
-  // const results = query ? fuse.search(query).map((r) => r.item) : [];
+  const handleChange = (val: string) => {
+    setQuery(val); // immediate UI update
+    debouncedCallback(val); // delayed parent update
+  };
 
   return (
     <div>
       <input
         placeholder={`Search ${page.title}...`}
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e) => handleChange(e.target.value)}
       />
-      <FontAwesomeIcon icon={faSearch} onClick={() => handleQuery(query)} />
     </div>
   );
 };

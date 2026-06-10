@@ -5,7 +5,6 @@ export default function HighlightText({
   text: string;
   query: string;
 }) {
-  console.warn(query);
   if (!query) return <span>{text}</span>;
 
   const regex = new RegExp(`(${query})`, "gi");
