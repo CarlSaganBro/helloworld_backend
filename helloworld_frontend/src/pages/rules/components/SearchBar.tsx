@@ -26,6 +26,8 @@ export const SearchBar = ({
           background: "#F2F2F2",
           width: "80%",
           padding: "8px",
+          outline: "none",
+          boxShadow: "none",
         }}
         placeholder={`Search ${page.title} rules...`}
         value={query}

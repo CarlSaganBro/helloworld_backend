@@ -15,7 +15,6 @@ export const RulesPage = ({}) => {
     <div style={{ display: "flex", height: "100vh" }}>
       <aside
         style={{
-          width: "150px",
           background: "rgb(0 0 0 / 5%)",
           color: "#fff",
           padding: "1rem",
@@ -24,6 +23,7 @@ export const RulesPage = ({}) => {
           gap: "1rem",
           margin: "16px",
           borderRadius: "8px",
+          height: "100vh",
         }}
       >
         <NavLink to={TOURNAMENT_PAGE.path} style={linkStyle}>

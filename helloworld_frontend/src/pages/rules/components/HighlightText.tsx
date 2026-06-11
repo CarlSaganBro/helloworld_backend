@@ -27,7 +27,7 @@ export default function HighlightText({
             {part}
           </mark>
         ) : (
-          part
+          parse(part)
         ),
       )}
     </span>
