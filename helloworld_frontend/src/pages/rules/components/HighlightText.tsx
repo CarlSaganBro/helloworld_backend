@@ -13,7 +13,7 @@ export default function HighlightText({
   const parts = text.split(regex);
 
   return (
-    <span>
+    <div>
       {parts.map((part, i) =>
         part.toLowerCase() === query.toLowerCase() ? (
           <mark
@@ -30,6 +30,6 @@ export default function HighlightText({
           parse(part)
         ),
       )}
-    </span>
+    </div>
   );
 }

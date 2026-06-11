@@ -1,6 +1,6 @@
 import { BaseRulesPage } from "./BaseRulesPage.tsx";
 import { SIGNUP_PAGE, SignupsRulesContent } from "../utils/pageContent.tsx";
-import { ExpandableItem } from "./ExpandableItem.tsx";
+import { RuleItem } from "./RuleItem.tsx";
 import { SearchBar } from "./SearchBar.tsx";
 import { useState } from "react";
 
@@ -17,7 +17,7 @@ export const SignupRules = ({}) => {
         <div>
           <ol>
             {SignupsRulesContent.map((rule, i) => (
-              <ExpandableItem
+              <RuleItem
                 key={`tournament-rule-${i}`}
                 rule={rule}
                 query={query}

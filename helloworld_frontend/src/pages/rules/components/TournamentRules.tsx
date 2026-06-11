@@ -3,7 +3,7 @@ import {
   TOURNAMENT_PAGE,
   TournamentRulesContent,
 } from "../utils/pageContent.tsx";
-import { ExpandableItem } from "./ExpandableItem.tsx";
+import { RuleItem } from "./RuleItem.tsx";
 import { SearchBar } from "./SearchBar.tsx";
 import { useState } from "react";
 
@@ -20,7 +20,7 @@ export const TournamentRules = ({}) => {
         <div>
           <ol>
             {TournamentRulesContent.map((rule, i) => (
-              <ExpandableItem
+              <RuleItem
                 key={`tournament-rule-${i}`}
                 rule={rule}
                 query={query}
