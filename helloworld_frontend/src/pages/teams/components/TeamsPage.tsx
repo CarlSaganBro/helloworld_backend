@@ -1,8 +1,9 @@
 import { TeamTile } from "./TeamTile.tsx";
+import "./style/TeamsPage.css";
 
 export const TeamsPage = ({}) => {
   return (
-    <div style={{ display: "flex", gap: "16px", justifyContent: "center" }}>
+    <div className="teamsPageContainer">
       <TeamTile />
       <TeamTile />
       <TeamTile />

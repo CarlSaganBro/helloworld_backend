@@ -1,3 +1,5 @@
+import "./style/CountdownNumber.css";
+
 export const CountdownNumber = ({
   num,
   descriptor,
@@ -6,13 +8,11 @@ export const CountdownNumber = ({
   descriptor: string;
 }) => {
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <div style={{ fontSize: "64px", height: "48px" }}>
+    <div className="countdownContainer">
+      <div className="countdownNumber">
         <b>{num.toString().padStart(2, "0")}</b>
       </div>
-      <div style={{ fontSize: "12px", textTransform: "uppercase" }}>
-        {descriptor}
-      </div>
+      <div className="countdownLabel">{descriptor}</div>
     </div>
   );
 };

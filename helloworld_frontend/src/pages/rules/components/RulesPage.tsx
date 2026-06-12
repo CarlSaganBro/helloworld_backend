@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SearchBar } from "./SearchBar.tsx";
 import { RuleItem } from "./RuleItem.tsx";
 import type { RulesPageDefinition } from "../types/types.tsx";
+import "./style/RulesPage.css";
 
 export const RulesPage = ({
   pageDefinition,
@@ -11,20 +12,13 @@ export const RulesPage = ({
   const [query, setQuery] = useState("");
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        height: "100vh",
-        width: "75vw",
-      }}
-    >
+    <div className="rulesPageContainer">
       <SearchBar
         pageTitle={pageDefinition.title}
         handleQuery={(result) => setQuery(result)}
       />
-      <div>
-        <ol>
+      <div className="rulesListWrapper">
+        <ol className="rulesList">
           {pageDefinition.content.map((rule, i) => (
             <RuleItem
               key={`${pageDefinition.path}-${i}`}

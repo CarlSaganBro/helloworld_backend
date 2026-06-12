@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { HomePage } from "../pages/home/components/HomePage.tsx";
 import { PAGES } from "../pages/rules/utils/pageContent.tsx";
 import type { PageDefinition } from "../pages/rules/types/types.tsx";
-import { Layout } from "./Layout.tsx";
+import { Layout } from "../components/Layout.tsx";
 
 export const MyApp = ({}) => {
   const renderRoutes = (pages: PageDefinition[]) => {

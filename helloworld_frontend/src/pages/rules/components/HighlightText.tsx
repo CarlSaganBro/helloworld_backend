@@ -1,4 +1,5 @@
 import parse from "html-react-parser";
+import "./style/HighlightText.css";
 
 export default function HighlightText({
   text,
@@ -13,23 +14,16 @@ export default function HighlightText({
   const parts = text.split(regex);
 
   return (
-    <div>
+    <>
       {parts.map((part, i) =>
         part.toLowerCase() === query.toLowerCase() ? (
-          <mark
-            key={i}
-            style={{
-              background: "#f06414",
-              color: "white",
-              padding: "0 2px",
-            }}
-          >
+          <mark key={i} className="highlightMark">
             {part}
           </mark>
         ) : (
           parse(part)
         ),
       )}
-    </div>
+    </>
   );
 }

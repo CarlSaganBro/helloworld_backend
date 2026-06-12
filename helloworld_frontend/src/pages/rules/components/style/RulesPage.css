@@ -1,0 +1,14 @@
+.rulesPageContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 75vw;
+}
+
+.rulesListWrapper {
+    /* no styles originally, keeping structure intact */
+}
+
+.rulesList {
+    /* no styles originally, preserving behavior */
+}

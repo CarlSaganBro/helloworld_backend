@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import HighlightText from "./HighlightText.tsx";
 import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
+import "./style/RuleItem.css";
 
 export function RuleItem({
   rule,
@@ -16,43 +17,24 @@ export function RuleItem({
   const parts = rule.content.match(regex);
 
   if (parts == null) {
-    // do not render result if it does not exist
     return <></>;
   }
 
   return (
     <div>
       <li>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            minHeight: "100px",
-          }}
-        >
+        <div className="ruleItemContainer">
           <HighlightText text={rule.content} query={query} />
+
           {rule.reason && (
             <div
+              className="ruleItemIconWrapper"
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
             >
               <FontAwesomeIcon icon={faQuestionCircle} size={"xl"} />
-              {hovered && (
-                <div
-                  style={{
-                    position: "absolute",
-                    background: "#222",
-                    color: "#fff",
-                    transform: "translateX(-475px) translateY(4px)",
-                    width: "500px",
-                    borderRadius: "8px",
-                    padding: "8px",
-                  }}
-                >
-                  {rule.reason}
-                </div>
-              )}
+
+              {hovered && <div className="ruleItemTooltip">{rule.reason}</div>}
             </div>
           )}
         </div>
