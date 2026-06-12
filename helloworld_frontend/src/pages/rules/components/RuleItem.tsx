@@ -44,7 +44,7 @@ export function RuleItem({
                     position: "absolute",
                     background: "#222",
                     color: "#fff",
-                    transform: "translateX(-500px)",
+                    transform: "translateX(-475px) translateY(4px)",
                     width: "500px",
                     borderRadius: "8px",
                     padding: "8px",

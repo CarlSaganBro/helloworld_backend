@@ -1,12 +1,11 @@
 import { useState } from "react";
-import type { PageDefinition } from "../types/types.tsx";
 import { useDebouncedCallback } from "../../../utils/useDebouncedCallback.ts";
 
 export const SearchBar = ({
-  page,
+  pageTitle,
   handleQuery,
 }: {
-  page: PageDefinition;
+  pageTitle: string;
   handleQuery: (result: string) => void;
 }) => {
   const [query, setQuery] = useState("");
@@ -29,7 +28,7 @@ export const SearchBar = ({
           outline: "none",
           boxShadow: "none",
         }}
-        placeholder={`Search ${page.title} rules...`}
+        placeholder={`Search ${pageTitle} rules...`}
         value={query}
         onChange={(e) => handleChange(e.target.value)}
       />

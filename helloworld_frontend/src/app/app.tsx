@@ -9,13 +9,13 @@ export const MyApp = ({}) => {
     return pages.map((page) => {
       if (page.subPages && page.subPages.length > 0) {
         return (
-          <Route key={page.path} path={page.path} element={page.element}>
+          <Route key={page.path} path={page.path} element={page.element()}>
             {renderRoutes(page.subPages)}
           </Route>
         );
       } else {
         return (
-          <Route key={page.path} path={page.path} element={page.element} />
+          <Route key={page.path} path={page.path} element={page.element()} />
         );
       }
     });

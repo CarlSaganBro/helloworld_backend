@@ -22,7 +22,7 @@
   --heading: "Segoe UI", "Inter", system-ui, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/150% var(--sans);
+  font: 16px/150% var(--sans);
   letter-spacing: 0.2px;
   color: var(--text);
   background: var(--bg);
@@ -33,7 +33,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   @media (max-width: 1024px) {
-    font-size: 16px;
+    /*font-size: 16px;*/
   }
 }
 
@@ -45,6 +45,7 @@
   text-align: center;
   border-inline: 0px solid var(--border);
   min-height: 100svh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -66,23 +67,23 @@ h2 {
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 34px;
   letter-spacing: -1px;
   margin: 32px 0;
 
   @media (max-width: 1024px) {
-    font-size: 34px;
-    margin: 20px 0;
+    /*font-size: 34px;*/
+    /*margin: 20px 0;*/
   }
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 0.5px;
   margin: 0 0 8px;
 
   @media (max-width: 1024px) {
-    font-size: 18px;
+    /*font-size: 18px;*/
   }
 }
 
