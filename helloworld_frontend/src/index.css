@@ -18,8 +18,8 @@
           rgba(0, 0, 0, 0.04) 0 2px 6px -2px;
 
   /* Typography */
-  --sans: "Segoe UI", "Inter", system-ui, sans-serif;
-  --heading: "Segoe UI", "Inter", system-ui, sans-serif;
+  --sans: 'BigNoodle', sans-serif;
+  --heading: 'BigNoodle', sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 16px/150% var(--sans);
@@ -31,17 +31,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    /*font-size: 16px;*/
-  }
 }
 
 /* Root layout */
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
   text-align: center;
   border-inline: 0px solid var(--border);
   min-height: 100svh;
@@ -55,12 +48,13 @@
 body {
   margin: 0;
   background: var(--bg);
+  font-family: var(--sans), sans-serif;
 }
 
 /* Headings */
 h1,
 h2 {
-  font-family: var(--heading);
+  font-family: var(--heading), serif;
   font-weight: 600;
   color: var(--text-h);
   text-transform: uppercase;
@@ -70,21 +64,12 @@ h1 {
   font-size: 34px;
   letter-spacing: -1px;
   margin: 32px 0;
-
-  @media (max-width: 1024px) {
-    /*font-size: 34px;*/
-    /*margin: 20px 0;*/
-  }
 }
 
 h2 {
   font-size: 18px;
   letter-spacing: 0.5px;
   margin: 0 0 8px;
-
-  @media (max-width: 1024px) {
-    /*font-size: 18px;*/
-  }
 }
 
 /* Body text */
@@ -113,6 +98,11 @@ a::after {
   height: 2px;
   background: var(--accent);
   transition: width 0.2s ease;
+}
+
+button:not([disabled]),
+[role="button"]:not([disabled]) {
+  cursor: pointer;
 }
 
 a:hover::after {

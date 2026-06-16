@@ -1,0 +1,134 @@
+.homeContainer {
+    background: #F6E7D4;
+    height: 100vh;
+}
+
+.splashCutout {
+    transform: translateY(-28px);
+}
+
+.splashPanel {
+    background-image: url('../assets/kiri_temp.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    display: flex;
+    width: 100%;
+
+    font-family: 'BigNoodle', sans-serif;
+    font-size: 18px;
+    color: rgb(256, 256, 256, 50%);
+
+    .splashLeft {
+        max-width: 50%;
+    }
+
+    .splashLeft, .splashRight {
+        display: flex;
+        flex: 1;
+        text-align: right;
+
+        .splashText {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
+            justify-content: center;
+
+            .splashQuip {
+                flex: 1;
+                margin-top: 80px;
+            }
+
+            .splashLogo {
+                flex: 1;
+                font-size: 64px;
+                color: #fc9d1f;
+                min-width: 556px;
+            }
+
+            .splashSignup {
+                display: flex;
+                flex: 1;
+                gap: 64px;
+                justify-content: center;
+                align-items: center;
+
+                > span {
+                    width: 1000px;
+                    min-width: 355px;
+                }
+
+                > button {
+                    height: 46px;
+                    min-width: 156px;
+                    background-image: linear-gradient(115deg, #fc9d1f, #F15D24);
+                    background-size: 150% 100%;
+                    background-position: 100% 0;
+                    border: none;
+                    outline: none;
+                    font-family: 'BigNoodle', sans-serif;
+                    color: white;
+                    font-size: 32px;
+                    transition: transform 0.2s ease, background-position 0.2s ease;
+                    -webkit-backface-visibility: hidden;
+                }
+
+                > button:hover {
+                    background-position: 0 0;
+                    transform: skew(-18deg);
+                    transition: transform 0.2s ease, background-position 0.2s ease;
+                    -webkit-backface-visibility: hidden;
+                }
+            }
+        }
+    }
+}
+
+.datesPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 64px;
+
+    .datePanel {
+        display: flex;
+        height: 200px;
+        width: 275px;
+        background: white;
+        border: 2px solid transparent;
+        border-image: linear-gradient(115deg, #fc9d1f, #F15D24) 1;
+        transform: skew(-20deg);
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        color: #F15D24;
+
+        .dateContent {
+            display: flex;
+            flex-direction: column;
+            transform: skew(20deg);
+            gap: 24px;
+
+            .dateTitle {
+                font-size: 32px;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .dateInfo {
+                display: flex;
+                flex-direction: column;
+                .dateDate, .dateTime {
+                    font-size: 24px;
+                }
+
+            }
+        }
+    }
+}
+
+
+

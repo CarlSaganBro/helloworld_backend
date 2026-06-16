@@ -24,7 +24,9 @@ export function RuleItem({
     <div>
       <li>
         <div className="ruleItemContainer">
-          <HighlightText text={rule.content} query={query} />
+          <div>
+            <HighlightText text={rule.content} query={query} />
+          </div>
 
           {rule.reason && (
             <div

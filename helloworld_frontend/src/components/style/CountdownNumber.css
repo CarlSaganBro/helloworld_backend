@@ -1,0 +1,4 @@
+.countdownContainer {
+    display: flex;
+    flex-direction: column;
+}

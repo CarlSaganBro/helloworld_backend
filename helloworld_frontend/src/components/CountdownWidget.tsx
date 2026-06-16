@@ -11,23 +11,15 @@ export const CountdownWidget = ({
 }) => {
   return (
     <div className="countdownWidget">
-      {flavorText}
-
+      <div className={"countdownFlavor"}>{flavorText}</div>
       <div className="countdownRow">
-        <CountdownNumber num={countdown.days} descriptor={"Days"} />
+        <CountdownNumber num={countdown.days} />
         <div className="countdownColon">:</div>
-
-        <CountdownNumber num={countdown.hours} descriptor={"Hours"} />
+        <CountdownNumber num={countdown.hours} />
         <div className="countdownColon">:</div>
-
-        <CountdownNumber num={countdown.minutes} descriptor={"Minutes"} />
+        <CountdownNumber num={countdown.minutes} />
         <div className="countdownColon">:</div>
-
-        <CountdownNumber num={countdown.seconds} descriptor={"Seconds"} />
-      </div>
-
-      <div className="countdownDate">
-        <b>{"08.22.2026"}</b>
+        <CountdownNumber num={countdown.seconds} />
       </div>
     </div>
   );

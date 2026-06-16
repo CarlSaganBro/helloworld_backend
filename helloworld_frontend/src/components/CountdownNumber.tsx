@@ -5,14 +5,14 @@ export const CountdownNumber = ({
   descriptor,
 }: {
   num: number;
-  descriptor: string;
+  descriptor?: string;
 }) => {
   return (
     <div className="countdownContainer">
       <div className="countdownNumber">
         <b>{num.toString().padStart(2, "0")}</b>
       </div>
-      <div className="countdownLabel">{descriptor}</div>
+      {descriptor && <div className="countdownLabel">{descriptor}</div>}
     </div>
   );
 };

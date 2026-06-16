@@ -1,12 +1,41 @@
 .header {
     display: flex;
     gap: 24px;
-    height: 50px;
+    height: 28px;
     padding: 1rem;
-    background: rgb(0 0 0 / 10%);
+    background: #0B2C3E;
     align-items: center;
-    border-radius: 8px;
-    margin: 16px;
+    width: auto;
+}
+
+.headerCenter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(28px);
+
+    svg {
+        position: relative; /* or absolute if you want full control */
+        z-index: 1;
+    }
+
+    a {
+        position: absolute;
+        padding-bottom: 20px;
+        z-index: 2;
+    }
+}
+
+.headerLeft,
+.headerRight {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-width: 214px;
+}
+.headerRight {
+    justify-content: flex-end;
 }
 
 .headerLogo {
@@ -20,28 +49,26 @@
 }
 
 .navLink {
-    color: #3a3f45;
     text-decoration: none;
     padding: 8px;
-    border-radius: 8px;
     width: 80px;
     display: inline-block;
     text-align: center;
     transition: all 0.2s ease;
+    font-family: 'BigNoodle', sans-serif;
+    color: white;
+    font-size: 24px;
 }
 
 .activeNavLink {
-    color: #fc9d1f;
+    color: #0B2C3E;
     font-weight: bold;
     background: rgb(255 255 255 / 60%);
+    transform: skew(-18deg);
+    -webkit-backface-visibility: hidden;
 }
 
 .navLink:hover {
     background: rgb(255 255 255 / 30%);
-}
-
-.headerRight {
-    display: flex;
-    align-items: flex-end;
-    margin-left: auto;
+    transform: skew(-18deg);
 }
